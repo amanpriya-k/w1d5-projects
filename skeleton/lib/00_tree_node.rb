@@ -1,11 +1,12 @@
 require "byebug"
 class PolyTreeNode
-  attr_accessor :value, :parent, :children
+  attr_accessor :value, :parent, :children, :root_node
   
-  def initialize(val, parent = nil, children = [])
+  def initialize(val, parent = nil, children = [],root_node)
     @value = val
     @parent = parent 
     @children = children
+    @root_node = root_node
   end
   
   def parent=(par)
